@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use AGRC-Surrogate in your research/project, please cite it as below."
+title: "AGRC-Surrogate: RANS-Trained Neural Networks-Based C81 Airfoil Table Generator"
+authors:
+  - family-names: Anand
+    given-names: Apurva
+repository-code: "https://github.com/anandaero747/AGRC-Surrogate"
+url: "https://github.com/anandaero747/AGRC-Surrogate"
+abstract: >
+  AGRC-Surrogate is a Neural Networks-based airfoil C81 table generator 
+  developed at Alfred Gessow Rotorcraft Center, Aerospace Enginerring deaprtment
+  at Univerity of Maryland College Park. AGRC-Surrogate is  trained on
+  RANS code (HAM2D).
+keywords:
+  - aerodynamics
+  - airfoil
+  - machine learning
+  - surrogate modeling
+  - C81 tables
+  - Neural Networks
+  - Rotorcraft 
+license: MIT
+version: 0.1.0
+date-released: 2026-02-01
+
