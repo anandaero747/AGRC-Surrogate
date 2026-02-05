@@ -15,11 +15,15 @@ dependencies = [
   "scipy",
   "joblib",
   "tensorflow",
-  "matplotlib"
+  "matplotlib",
+  "scikit-learn==1.6.1"
 ]
 
 [project.scripts]
 agrc-c81 = "agrc_surrogate.predict_360_pt3_pt8:main"
+
+[project.optional-dependencies]
+opt = ["deap"]
 
 [tool.setuptools]
 packages = ["agrc_surrogate"]

@@ -26,3 +26,14 @@ agrc-c81 --airfoil your_airfoil.dat
 This generates C81_all_mach.dat file
 
 
+## Optimization (GA via DEAP)
+
+Install with optimization extras:
+
+pip install "agrc-surrogate[opt]"
+
+Run example GA optimization:
+
+python examples/ga_optimize_sc1095.py --airfoil path/to/airfoil.dat --aoa 2.0 --mach 0.3 --pop 80 --ngen 30
+
+
