@@ -42,4 +42,15 @@ Run example GA optimization:
 
 python examples/ga_optimize_sc1095.py --airfoil path/to/airfoil.dat --aoa 2.0 --mach 0.3 --pop 80 --ngen 30
 
+If you find the package useful, please cite our work
+
+@article{anand2026generalizable,
+  title={Generalizable deep learning module for rotorcraft inverse design applications},
+  author={Anand, Apurva and Marepally, Koushik and Safdar, M Muneeb and Lee, Bumseok and Baeder, James D},
+  journal={Journal of Aircraft},
+  pages={1--15},
+  year={2026},
+  publisher={American Institute of Aeronautics and Astronautics}
+}
+
 
