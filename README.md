@@ -16,9 +16,12 @@ An added functionality is also included in the package for airfoil optimization.
 with DEAP genetic algorithm (GA) library to optimize airfoil at any mach number and angle of attack. Currently there are no thickness constraints included in the optimization package, but it should be easy to modify. Feel free to contact anandaero747@gmail.com to get optimization code with thickness constraint.
 
 
-## Installation
+## Installation and Environment Recommendation 
 
 ```bash
+
+Recommended: Create an environment to use the package. "python -m venv agrc-env", "source agrc-env/bin/activate"
+
 git clone https://github.com/anandaero747/AGRC-Surrogate.git
 cd AGRC-Surrogate
 pip install -e .
