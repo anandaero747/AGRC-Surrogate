@@ -42,6 +42,21 @@ Run example GA optimization:
 
 python examples/ga_optimize_sc1095.py --airfoil path/to/airfoil.dat --aoa 2.0 --mach 0.3 --pop 80 --ngen 30
 
+## Testing
+
+Install the test dependencies and run the test suite:
+
+```bash
+pip install -e ".[dev]"
+pytest tests/ -v
+```
+
+To skip the slow integration tests that load TensorFlow models:
+
+```bash
+pytest tests/ -v -m "not slow"
+```
+
 If you find the package useful, please cite our work
 
 @article{anand2026generalizable,

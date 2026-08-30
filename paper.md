@@ -33,6 +33,18 @@ Existing alternatives are insufficient for the subsonic compressible regime rele
 
 `AGRC-Surrogate` addresses this gap by providing a trained, installable software tool that maps arbitrary airfoil geometry directly to ready-to-use C81 tables in sub-second inference time. It is designed for integration into rotorcraft design workflows: the package exposes a Python API (in addition to a CLI) that enables other codes to call C81 table generation programmatically, and the optional DEAP-based optimization module demonstrates its use in a genetic algorithm inverse design loop. The underlying models were trained on high-fidelity RANS data generated with the HAM2D structured CFD solver across a family of airfoil geometries representative of modern rotorcraft blade sections [@anand2026joa].
 
+# State of the Field
+
+Several existing tools address parts of the aerodynamic analysis problem for airfoils, but none produce the full multi-Mach C81 table format required by rotorcraft comprehensive codes from arbitrary geometry input.
+
+**Panel methods** such as XFOIL [@drela1989xfoil] are widely used for airfoil analysis but are limited to incompressible or low-subsonic flows. They cannot capture the transonic compressibility effects that dominate the advancing blade environment at Mach 0.5–0.8, and they do not produce the 360° AoA range required by rotorcraft codes for modeling retreating blade and autorotation states.
+
+**Tabulated airfoil catalogs** (e.g., published NACA section data) are available for a small set of standard profiles. These are not generalizable to novel airfoil geometries and cannot support optimization workflows that require evaluating arbitrary candidate designs.
+
+**Machine learning approaches** for airfoil aerodynamic prediction have grown substantially [@bouhlel2020airfoil; @li2020machine]. However, existing work predominantly targets scalar or two-dimensional outputs (e.g., $C_l$ and $C_d$ at a single operating condition) and is not structured to produce the multi-Mach, full-360° tabular format expected by rotorcraft analysis software. These tools are also typically research prototypes without installable Python packages or command-line interfaces.
+
+`AGRC-Surrogate` fills the gap between these approaches by providing an installable, production-ready software tool that generates complete C81 tables—compatible with CAMRAD II, FLIGHTLAB, and similar codes—for any airfoil geometry in sub-second inference time. Rather than replacing existing tools, it is designed to complement high-fidelity CFD workflows by accelerating the early-stage design space exploration and enabling population-based optimization that would be computationally infeasible with RANS solvers alone.
+
 # Methodology
 
 ## Airfoil Parameterization
